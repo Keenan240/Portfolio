@@ -103,20 +103,14 @@ const projects = [
 
       <div className="projectGrid">
         {projects.map((project, index) => (
-          <a
+          <ProjectCard
             key={index}
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            <ProjectCard
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              color={project.color}
-            />
-          </a>
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            color={project.color}
+            link={project.link}
+          />
         ))}
       </div>
     </div>

@@ -12,7 +12,7 @@ html {
 body {
   margin: 0;
   line-height: normal;
-  background-color: #f8f8f8;
+  background-color: #ffffff; /* ← change this to any color you want */
   font-family: 'SF Pro Display', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

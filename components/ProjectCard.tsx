@@ -5,11 +5,22 @@ interface ProjectCardProps {
   description: string;
   image: string;
   color: string;
+  link?: string;
 }
 
-export default function ProjectCard({ title, description, image, color }: ProjectCardProps) {
+export default function ProjectCard({ title, description, image, color, link }: ProjectCardProps) {
+  const handleClick = () => {
+    if (link) {
+      window.open(link, "_blank");
+    }
+  };
+
   return (
-    <div className="projectCardBox">
+    <div
+      className="projectCardBox"
+      onClick={handleClick}
+      style={{ cursor: link ? "pointer" : "default" }}
+    >
       <div className="projectCardBoxChild" />
       
       <Image
