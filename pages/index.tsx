@@ -2,8 +2,6 @@ import type { NextPage } from 'next';
 import Experiences from '../components/Experiences';
 import ProjectCard from '../components/ProjectCard';
 
-import '../styles/styles.css'; // Import the non-module CSS
-
 const HomePage: NextPage = () => {
   const copyEmail = () => {
     navigator.clipboard.writeText("keenanyang1027@gmail.com");
