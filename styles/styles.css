@@ -525,7 +525,7 @@
 
   .homePage {
     padding: 20px;
-    margin-top:80px;
+    margin-top:70px;
     height: auto;
     font-family: 'SF Pro Display';
   }
@@ -541,12 +541,12 @@
   }
 
   .heroSection {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    top: 15;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
   }
 
   .profileContainer{
