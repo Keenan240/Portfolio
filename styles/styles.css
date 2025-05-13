@@ -1,0 +1,587 @@
+/* === Reveal animation === */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.7s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Your layout styles === */
+
+.intro {
+  position: absolute;
+  top: 289px;
+  left: 285px;
+  font-size: 48px;
+}
+
+.descContainer {
+  position: absolute;
+  top: 360px;
+  left: 285px;
+  font-size: 36px;
+
+}
+
+.descSide {
+  color: #a9a9a9;
+}
+
+.descMain {
+  font-weight: 500;
+}
+
+.queensUniversity {
+  background: linear-gradient(90deg, #004292, #b90e32 50%, #fabc0f 99.52%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+.queensUniversity::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transition: width 0.5s ease;
+  cursor: pointer;
+}
+
+.queensUniversity:hover::after {
+  width: 100%;
+}
+
+.checkOutSome {
+  position: absolute;
+  top: 1124px;
+  left: 285px;
+  font-size: 32px;
+  font-weight: 500;
+  color: #878787;
+  display: inline-block;
+  width: 876px;
+}
+
+.groupItem {
+  position: absolute;
+  top: 48px;
+  left: 82px;
+  border-radius: 50%;
+  background-color: #8aff8e;
+  width: 10px;
+  height: 10px;
+}
+
+.lookingForWork {
+  position: absolute;
+  width: max-content;
+  top: 45px;
+  left: 102px;
+}
+
+.keenanYang {
+  position: absolute;
+  top: 16px;
+  left: 82px;
+  font-size: 20px;
+
+}
+
+.profileContainer {
+  position: absolute;
+  top: 133px;
+  left: 285px;
+  width: 205px;
+  height: 68px;
+  font-size: 14px;
+  cursor: pointer;
+  color:#000;
+}
+
+.experienceBox {
+  position: absolute;
+  top: 503px;
+  left: 285px;
+  width: 350px;
+  height: 350px;
+  font-size: 14px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experienceBox:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.experienceBoxChild {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  background-color: #f8f8f8;
+  border: 5px solid #fff;
+  box-sizing: border-box;
+  width: 350px;
+  height: 350px;
+
+}
+
+.myExperience {
+  position: relative;
+  
+}
+
+.myExperienceWrapper {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border-radius: 25px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+.rolesContainer {
+  position: absolute;
+  top: 84px;
+  left: 48px;
+  right: 20px;
+  bottom: 20px;
+  overflow-y: auto;
+  padding-right: 10px;  
+  
+}
+
+/* Chrome, Safari, Edge */
+.rolesContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.rolesContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.rolesContainer::-webkit-scrollbar-thumb {
+  background-color: #e7e6e6;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.rolesContainer::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+
+.roleEntry {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.roleEntry .title {
+  font-weight: 500;
+  width: max-content;
+}
+
+.roleEntry .detail {
+  font-size: 10px;
+  color: #878787;
+}
+
+.roleIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  object-fit: contain;
+}
+
+.roleText {
+  display: flex;
+  flex-direction: column;
+}
+
+.roleText .title {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.roleText .detail {
+  font-size: 10px;
+  color: #878787;
+}
+
+.experienceBox {
+  position: absolute;
+  top: 503px;
+  left: 285px;
+  width: 350px;
+  height: 350px;
+  font-size: 14px;
+}
+
+.projects {
+  position: absolute;
+  top: 1053px;
+  left: 285px;
+  font-size: 48px;
+  text-align: center;
+}
+
+.frameChild {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 25px;
+  border: 5px solid #fff;
+  box-sizing: border-box;
+  width: 216px;
+  height: 161px;
+}
+
+.label {
+  position: absolute;
+  top: 20px;
+  left: 14px;
+  border-radius: 25px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+.resumeParent, .emailParent, .linkedInParent, .githubParent {
+  position: absolute;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  width: 216px;
+  height: 161px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.resumeParent { top: 503px; left: 664px;   color:#000;}
+.emailParent { top: 692px; left: 932px;   color:#000;}
+.linkedInParent { top: 498px; left: 932px;   color:#000;}
+.githubParent { top: 692px; left: 664px;   color:#000;}
+
+.resumeParent:hover, .emailParent:hover, .linkedInParent:hover, .githubParent:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+  color:#000;
+}
+
+.FirstIcons {
+  position: absolute;
+  top: 82px;
+  right: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1100px;
+}
+
+@media (max-width: 768px) {
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
+}
+.projectCardBox {
+  position: relative;
+  top:1350px;
+  left: 265px;
+  width: 350px;
+  height: 350px;
+  margin-bottom: 24px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  border: 10px solid #fff;
+  overflow: hidden;
+  font-family: 'SF Pro Display', sans-serif;
+  text-align: left;
+  color: #000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.projectCardBox:hover {
+  position: relative;
+  top:1350px;
+  left: 265px;
+  width: 350px;
+  height: 350px;
+  margin-bottom: 24px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  border: 10px solid #fff;
+  overflow: hidden;
+  font-family: 'SF Pro Display', sans-serif;
+  text-align: left;
+  color: #000;
+  cursor:pointer;
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.projectCardBoxChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  z-index: 0;
+}
+
+.projectIcon {
+  position: absolute;
+  top: -17px;
+  right: -17px;
+  width: 120px;
+  height: 140px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.projectLabel {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.projectDescription {
+  position: absolute;
+  top: 210px;
+  left: 20px;
+  width: 310px;
+  font-size: 16px;
+  color: #878787;
+  z-index: 2;
+  line-height: 1.4;
+}
+
+.projectText {
+  font-weight: 500;
+}
+
+
+
+.homePage {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #f8f8f8;
+  height: 2514px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 20px;
+  color: #000;
+  font-family: 'SF Pro Display';
+}
+
+
+/* Mobile-friendly layout for Experience Box */
+@media (max-width: 768px) {
+  .experienceBox {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 90%;
+    height: auto;
+    margin: 40px auto;
+  }
+
+  .experienceBoxChild {
+    width: 100%;
+    height: 100%;
+  }
+
+  .myExperienceWrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 16px;
+    font-size: 18px;
+    justify-content: flex-start;
+  }
+
+  .rolesContainer {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    max-height: 300px;
+    padding: 0 10px;
+    overflow-y: auto;
+  }
+
+  .roleEntry {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .roleIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .roleText .title {
+    font-size: 14px;
+  }
+
+  .roleText .detail {
+    font-size: 10px;
+  }
+
+  .projectGrid {
+      grid-template-columns: 1fr;
+      padding: 0 16px;
+    }
+
+  .projectCardBox {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .projectIcon {
+    width: 100px;
+    height: 100px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .projectDescription {
+    position: relative;
+    top: 150px;
+    left: 20px;
+    width: auto;
+    font-size: 14px;
+  }
+
+  .projectLabel {
+    top: 20px;
+    left: 20px;
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .homePage {
+    padding: 10px;
+    height: auto; /* ✅ Let content determine height */
+  }
+
+  .heroSection,
+  .experienceSection,
+  .quickLinks {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .profileContainer,
+  .intro,
+  .descContainer,
+  .checkOutSome,
+  .projects {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 90%;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .intro {
+    font-size: 32px;
+  }
+
+  .descContainer {
+    font-size: 24px;
+  }
+
+  .projects {
+    font-size: 32px;
+    margin-top: 40px;
+  }
+
+  .checkOutSome {
+    font-size: 16px;
+    width: 90%;
+    padding: 0 10px;
+  }
+
+  .resumeParent,
+  .emailParent,
+  .linkedInParent,
+  .githubParent {
+    position: relative;
+    width: 90%;
+    height: auto;
+  }
+
+  .FirstIcons {
+    top: auto;
+    right: auto;
+    margin: 16px auto;
+    display: block;
+    position: relative;
+  }
+
+  .label {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+}
+
