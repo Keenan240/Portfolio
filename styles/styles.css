@@ -1,4 +1,4 @@
-/* === Reveal animation === */
+/* === Reveal Animation === */
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -16,8 +16,25 @@
   }
 }
 
-/* === Your layout styles === */
+/* === General Page Layout === */
+.homePage {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding-bottom: 100px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 20px;
+  color: #000;
+  font-family: 'SF Pro Display';
+}
 
+/* === Intro Section === */
 .intro {
   position: absolute;
   top: 289px;
@@ -30,7 +47,6 @@
   top: 360px;
   left: 285px;
   font-size: 36px;
-
 }
 
 .descSide {
@@ -41,6 +57,7 @@
   font-weight: 500;
 }
 
+/* === Queens University Link === */
 .queensUniversity {
   background: linear-gradient(90deg, #004292, #b90e32 50%, #fabc0f 99.52%);
   -webkit-background-clip: text;
@@ -49,7 +66,6 @@
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
-
 }
 
 .queensUniversity::after {
@@ -68,17 +84,7 @@
   width: 100%;
 }
 
-.checkOutSome {
-  position: absolute;
-  top: 1124px;
-  left: 285px;
-  font-size: 32px;
-  font-weight: 500;
-  color: #878787;
-  display: inline-block;
-  width: 876px;
-}
-
+/* === Header / Profile === */
 .groupItem {
   position: absolute;
   top: 48px;
@@ -101,7 +107,6 @@
   top: 16px;
   left: 82px;
   font-size: 20px;
-
 }
 
 .profileContainer {
@@ -112,9 +117,10 @@
   height: 68px;
   font-size: 14px;
   cursor: pointer;
-  color:#000;
+  color: #000;
 }
 
+/* === Experience Box === */
 .experienceBox {
   position: absolute;
   top: 503px;
@@ -131,7 +137,7 @@
 
 .experienceBox:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .experienceBoxChild {
@@ -145,12 +151,10 @@
   box-sizing: border-box;
   width: 350px;
   height: 350px;
-
 }
 
 .myExperience {
   position: relative;
-  
 }
 
 .myExperienceWrapper {
@@ -167,6 +171,7 @@
   font-size: 20px;
 }
 
+/* === Roles Section === */
 .rolesContainer {
   position: absolute;
   top: 84px;
@@ -174,11 +179,9 @@
   right: 20px;
   bottom: 20px;
   overflow-y: auto;
-  padding-right: 10px;  
-  
+  padding-right: 10px;
 }
 
-/* Chrome, Safari, Edge */
 .rolesContainer::-webkit-scrollbar {
   width: 6px;
 }
@@ -197,18 +200,19 @@
   background-color: #555;
 }
 
-
 .roleEntry {
   position: relative;
   margin-bottom: 25px;
 }
 
-.roleEntry .title {
+.roleEntry .title,
+.roleText .title {
   font-weight: 500;
-  width: max-content;
+  font-size: 14px;
 }
 
-.roleEntry .detail {
+.roleEntry .detail,
+.roleText .detail {
   font-size: 10px;
   color: #878787;
 }
@@ -226,23 +230,13 @@
   flex-direction: column;
 }
 
-.roleText .title {
-  font-weight: 500;
-  font-size: 14px;
-}
-
-.roleText .detail {
-  font-size: 10px;
-  color: #878787;
-}
-
-.experienceBox {
-  position: absolute;
-  top: 503px;
-  left: 285px;
-  width: 350px;
-  height: 350px;
-  font-size: 14px;
+/* === Projects Section === */
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+  margin-top: 1350px;
 }
 
 .projects {
@@ -253,71 +247,16 @@
   text-align: center;
 }
 
-.frameChild {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  border-radius: 25px;
-  border: 5px solid #fff;
-  box-sizing: border-box;
-  width: 216px;
-  height: 161px;
-}
-
-.label {
-  position: absolute;
-  top: 20px;
-  left: 14px;
-  border-radius: 25px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-}
-
-.resumeParent, .emailParent, .linkedInParent, .githubParent {
-  position: absolute;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
-  width: 216px;
-  height: 161px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.resumeParent { top: 503px; left: 664px;   color:#000;}
-.emailParent { top: 692px; left: 932px;   color:#000;}
-.linkedInParent { top: 498px; left: 932px;   color:#000;}
-.githubParent { top: 692px; left: 664px;   color:#000;}
-
-.resumeParent:hover, .emailParent:hover, .linkedInParent:hover, .githubParent:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
-  color:#000;
-}
-
-.FirstIcons {
-  position: absolute;
-  top: 82px;
-  right: 5px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
 .projectGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  max-width: 1100px;}
+  max-width: 1100px;
+}
 
-
-.projectCardBox {
+.projectCardBox,
+.projectCardBox:hover {
   position: relative;
-  top:1350px;
+  top: 1350px;
   left: 265px;
   width: 350px;
   height: 350px;
@@ -331,24 +270,10 @@
   color: #000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
 }
 
 .projectCardBox:hover {
-  position: relative;
-  top:1350px;
-  left: 265px;
-  width: 350px;
-  height: 350px;
-  margin-bottom: 24px;
-  background-color: #ffffff;
-  border-radius: 25px;
-  border: 10px solid #fff;
-  overflow: hidden;
-  font-family: 'SF Pro Display', sans-serif;
-  text-align: left;
-  color: #000;
-  cursor:pointer;
+  cursor: pointer;
   transform: scale(1.05);
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
 }
@@ -400,226 +325,232 @@
   font-weight: 500;
 }
 
+/* === Project Card === */
+.project,
+.project:hover {
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+  border-radius: 25px;
+  background-color: #f3f3f3;
+  height: 558px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 36px;
+  color: #000;
+  font-family: 'SF Pro Display', sans-serif;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.project-child,
+.project-child-img {
+  position: absolute;
+  top: 311.57px;
+  left: 97px;
+  width: 303px;
+  height: 282px;
+  border-radius: 25px;
+  border: 5px solid #fff;
+  transform: rotate(-2deg);
+  transform-origin: 0 0;
+  background-color: #000;
+  box-sizing: border-box;
+}
+
+.project-child-img {
+  object-fit: cover;
+  z-index: 1;
+  left: 90px;
+}
+
+.project-item,
+.project-item-img {
+  position: absolute;
+  top: 279px;
+  left: 410px;
+  width: 494px;
+  height: 304px;
+  border-radius: 25px;
+  border: 5px solid #fff;
+  background-color: #000;
+  box-sizing: border-box;
+}
+
+.project-item-img {
+  object-fit: cover;
+  z-index: 1;
+}
+
+.project-title {
+  position: absolute;
+  top: 37px;
+  left: 95px;
+  font-weight: 500;
+}
+
+.description-container {
+  position: absolute;
+  top: 99px;
+  left: 40px;
+  font-size: 20px;
+  color: #878787;
+}
+
+.description-line {
+  margin: 0;
+}
+
+.arrow-icon,
+.icon-img {
+  position: absolute !important;
+  width: 51px !important;
+  height: 51px !important;
+  overflow: hidden !important;
+}
+
+.arrow-icon {
+  top: 32px !important;
+  left: 853px !important;
+}
+
+.color-box {
+  position: absolute;
+  top: 36px;
+  left: 40px;
+  border-radius: 10px;
+  width: 45px;
+  height: 45px;
+  z-index: 1;
+}
+
+.icon-wrapper {
+  position: absolute;
+  top: 40px;
+  left: 48px;
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+}
+
+.icon-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+/* === Contact Cards === */
+.resumeParent,
+.emailParent,
+.linkedInParent,
+.githubParent {
+  position: absolute;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  background-color: #f8f8f8;
+  width: 216px;
+  height: 161px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  color: #000;
+}
+
+.resumeParent { top: 503px; left: 664px; }
+.emailParent { top: 692px; left: 932px; }
+.linkedInParent { top: 498px; left: 932px; }
+.githubParent { top: 692px; left: 664px; }
+
+.resumeParent:hover,
+.emailParent:hover,
+.linkedInParent:hover,
+.githubParent:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* === Additional UI === */
+.FirstIcons {
+  position: absolute;
+  top: 82px;
+  right: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.dotgrid {
+  position: flex;
+  top: 100px;
+  right: -20px;
+}
+
+.label {
+  position: absolute;
+  top: 20px;
+  left: 14px;
+  border-radius: 25px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+.frameChild {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 25px;
+  border: 5px solid #fff;
+  box-sizing: border-box;
+  width: 216px;
+  height: 161px;
+}
+
 .quickLinks {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 28px 40px; /* vertical and horizontal spacing */
+  gap: 28px 40px;
   position: absolute;
   top: 0px;
   left: 0px;
 }
 
-.homePage {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  background-color: #ffffff;
-  height: 2514px;
-  overflow: hidden;
-  text-align: left;
-  font-size: 20px;
-  color: #000;
-  font-family: 'SF Pro Display';
+.checkOutSome {
+  position: absolute;
+  top: 1124px;
+  left: 285px;
+  font-size: 32px;
+  font-weight: 500;
+  color: #878787;
+  display: inline-block;
+  width: 876px;
 }
 
-
-/* Mobile-friendly layout for Experience Box */
-@media (max-width: 768px) {
-  .experienceBox {
-    position: relative;
-    top: auto;
-    left: auto;
-    width: 90%;
-    height: auto;
-    margin: 40px auto;
-  }
-
-  .experienceBoxChild {
-    width: 100%;
-    height: 100%;
-  }
-
-  .myExperienceWrapper {
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-bottom: 16px;
-    font-size: 18px;
-    justify-content: flex-start;
-  }
-
-  .rolesContainer {
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: auto;
-    max-height: 300px;
-    padding: 0 10px;
-    overflow-y: auto;
-  }
-
-  .roleEntry {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-
-  .roleIcon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .roleText .title {
-    font-size: 14px;
-  }
-
-  .roleText .detail {
-    font-size: 10px;
-  }
-
-  .projectGrid {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 0 16px;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .projectCardBox {
-    position: relative;
-    left: -7px;
-    top: 0;
-    width: 90%;
-    max-width: 350px;
-    height: 275px;
-  }
-
-  .projectIcon {
-    width: 80px;
-    height: 100px;
-    top: 10px;
-    right: 10px;
-  }
-
-  .projectDescription {
-    position: relative;
-    top: 150px;
-    left: 20px;
-    width: 300;
-    font-size: 14px;
-  }
-
-  .projectLabel {
-    top: 20px;
-    left: 20px;
-    font-size: 16px;
-    padding: 8px 16px;
-  }
-
-  .homePage {
-    padding: 20px;
-    margin-top:70px;
-    height: auto;
-    font-family: 'SF Pro Display';
-  }
-
-  .experienceSection,
-  .quickLinks {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    top:30;
-  }
-
-  .heroSection {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-  }
-
-  .profileContainer{
-    display: none;
-  }
-
-  .checkOutSome {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    left: 3%;
-    top: 0;
-    width: 90%;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  .projects {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    left: 5%;
-    top: 0;
-    width: 90%;
-    text-align: center;
-    margin-bottom: 10px;
-  
-  }
-
-  .intro {
-    font-size: 32px;
-    margin-top:15px;
-    position: relative;
-    left: 10;
-    top: 0;
-    width: 90%;
-    text-align: left;
-  }
-
-  .descContainer {
-    position: relative;
-    left: 10;
-    top: 0;
-    width: 90%;
-    text-align: left;
-    font-size: 20px;
-  }
-
-  .projects {
-    font-size: 32px;
-    margin-top: 30px;
-  }
-
-  .checkOutSome {
-    font-size: 16px;
-    width: 90%;
-    padding: 0 10px;
-  }
-
-  .resumeParent,
-  .emailParent,
-  .linkedInParent,
-  .githubParent {
-    display: none;
-  }
-
-
-  .label {
-    position: relative;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-
+.skillsContainer {
+  position: absolute;
+  top: 400px;
+  left: 285px;
+  font-size: 48px;
+  text-align: center;
 }
 
+.skillsBox {
+  padding: 8px 16px;
+  border: 1px solid black;
+  border-radius: 9999px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 8px;
+  display: inline-block;
+}

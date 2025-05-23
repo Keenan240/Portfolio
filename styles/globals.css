@@ -12,9 +12,10 @@ html {
 body {
   margin: 0;
   line-height: normal;
-  background-color: #ffffff; /* ← change this to any color you want */
+  background-color: #ffffff;
   font-family: 'SF Pro Display', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+
 }

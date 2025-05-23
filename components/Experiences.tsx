@@ -26,10 +26,6 @@ export default function Experiences() {
       icon: "qtma.png"
     },
 
-
-
-
-
   ];
 
   return (

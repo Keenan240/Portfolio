@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
+import Skills from '../components/Skills';
 import Experiences from '../components/Experiences';
-import ProjectCard from '../components/ProjectCard';
+import ProjectsSection from "../components/ProjectsSection";
 
 const HomePage: NextPage = () => {
   const copyEmail = () => {
@@ -8,31 +9,9 @@ const HomePage: NextPage = () => {
     alert("Email copied to clipboard!");
   };
 
-const projects = [
-    {
-      title: "StudentStars",
-      description: "Designed a Website to help Grade 12 Students understand & research Ontario Universities more efficiently and guide them through the admissions process ",
-      image: "/grad-hat.png",
-      color: "#c51c41",
-      link: "https://student-stars.vercel.app/",
-    },
-    {
-      title: "LangChain Bot",
-      description: "Created a LangChain Chatbot for a Dental Office that scrapes it’s website for information and provides the user specific answers on the company using the website’s information - Project for Auxio.AI",
-      image: "/langchain.png",
-      color: "#00bcd4",
-      link: "https://langchain-chatbot-teal.vercel.app/",
-    },
-    {
-      title: "LinkedIn Scraper",
-      description: "Created an automated Python Script that will scrape LinkedIn job postings for information and upload them to a Google Spreadsheet",
-      image: "/scraper.png",
-      color: "#1C6BC5",
-    },
-  ];
-
   return (
     <div className="homePage reveal">
+
       <div className="heroSection">
         <a href="https://www.linkedin.com/in/keenan-yang-5155682a2/" className="profileContainer">
           <img src="/Ellipse 1.png" alt="My Photo" />
@@ -55,6 +34,8 @@ const projects = [
           <b className="queensUniversity">{`Queen’s University `}</b>
         </div>
       </div>
+
+      <Skills skills={["Python", "React", "HTML", "CSS", "Figma"]} />
 
       <div className="experienceSection">
         <Experiences />
@@ -95,24 +76,9 @@ const projects = [
       </div>
 
       <div className="projectsSection">
-        <b className="projects">Projects</b>
-        <div className="checkOutSome">
-          Check out some of my work! — This Summer my goal was to build as many projects as I could. Real Code or Vibe Code, any code to me is experience learning, so take a peek at some of my projects!
-        </div>
+        <ProjectsSection />
       </div>
-
-      <div className="projectGrid">
-        {projects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            title={project.title}
-            description={project.description}
-            image={project.image}
-            color={project.color}
-            link={project.link}
-          />
-        ))}
-      </div>
+      
     </div>
   );
 };
