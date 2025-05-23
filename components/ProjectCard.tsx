@@ -22,7 +22,6 @@ export default function ProjectCard({
   image2Src,
   link,
 }: ProjectCardProps) {
-  const router = useRouter();
 
   const handleClick = () => {
     if (link) {
