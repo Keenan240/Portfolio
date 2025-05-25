@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function HeaderProfile() {
   return (
-    <div className="hidden sm:block mt-24 ml-[550px] max-w-[250px]">
+    <div className="hidden sm:block mt-24 ml-[450px] max-w-[250px]">
       <a
         href="https://www.linkedin.com/in/keenan-yang-5155682a2/"
         target="_blank"
