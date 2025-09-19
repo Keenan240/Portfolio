@@ -4,8 +4,6 @@ import Navbar from '../components/Navbar';
 import Experiences from '../components/Bio';
 import QuickLinks from '../components/QuickLinks';
 import ProjectsSection from '../components/ProjectSection';
-import Link from "next/link";
-
 
 export default function HomePage() {
   const copyEmail = () => {

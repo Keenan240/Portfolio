@@ -1,7 +1,6 @@
 'use client';
 
 import Image from "next/image";
-import { useEffect } from "react";
 import "aos/dist/aos.css";
 
 interface ProjectCardProps {
