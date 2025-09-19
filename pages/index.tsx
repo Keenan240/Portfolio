@@ -1,10 +1,10 @@
 'use client';
 
-import Header from '../components/Header';
-import SkillTags from '../components/Skills';
-import Experiences from '../components/Experiences';
+import Navbar from '../components/Navbar';
+import Experiences from '../components/Bio';
 import QuickLinks from '../components/QuickLinks';
 import ProjectsSection from '../components/ProjectSection';
+import Link from "next/link";
 
 
 export default function HomePage() {
@@ -14,14 +14,15 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8f8f8] mt-36">
+    <div className="min-h-screen mt-28">
+      <Navbar />
       {/* Main Content Wrapper */}
-      <div className="w-full max-w-7xl mx-auto px-6 mt-24">
+      <div className="w-full max-w-7xl mx-auto px-6 mt-40">
         {/* Hero Section */}
         <div className="text-center ">
-          <h1 className="text-4xl sm:text-6xl font-bold hover:scale-[1.05] transition-all duration-300 cursor-pointer">Hey, I’m Keenan Yang!</h1>
+          <h1 className="text-4xl sm:text-6xl font-bold">Hey, I’m Keenan Yang!</h1>
 
-          <div className="gap-2 mt-6 text-2xl sm:text-4xl hover:scale-[1.05] transition-all duration-300 cursor-pointer">
+          <div className="gap-2 mt-6 text-2xl sm:text-4xl">
             <span className="font-medium text-[#a9a9a9] mr-2">I am a</span>
             <span className="font-semibold mr-2">Computer Science Student</span>
             <span className="font-medium text-[#a9a9a9] mr-2">at</span>
@@ -31,13 +32,8 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Skills */}
-        <div className="flex justify-center mt-6">
-          <SkillTags skills={["Python", "React", "Next.js", "HTML", "CSS", "Figma"]} />
-        </div>
-
         {/* Experiences and Quick Links */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10 mt-16">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-10">
           <Experiences />
           <QuickLinks copyEmail={copyEmail} />
         </div>

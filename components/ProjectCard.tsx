@@ -1,6 +1,8 @@
 'use client';
 
 import Image from "next/image";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
 
 interface ProjectCardProps {
   title: string;
@@ -30,7 +32,7 @@ export default function ProjectCard({
   return (
     <div
       onClick={handleClick}
-      className="relative w-full max-w-[500px] bg-[#f3f3f3] rounded-[25px] shadow-md hover:shadow-xl hover:scale-[1.02] transition-all cursor-pointer p-6"
+      className="relative w-full max-w-[500px] bg-[#f3f3f3] rounded-[25px] cursor-pointer p-6 transition-transform duration-200 ease-in-out hover:-translate-y-2 "
     >
       {/* Top section */}
       <div className="flex items-center justify-between">
